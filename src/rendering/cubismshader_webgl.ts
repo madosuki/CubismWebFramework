@@ -20,11 +20,11 @@ import { CubismBlendMode, CubismTextureColor } from './cubismrenderer';
 import { CubismRenderer_WebGL } from './cubismrenderer_webgl';
 
 import VertShaderSrcCopy from '../../Shaders/WebGL/vertshadersrccopy.vert?raw';
-import FragShaderSrcCopy from '../..//Shaders/WebGL/fragshadersrccopy.frag?raw';
+import FragShaderSrcCopy from '../../Shaders/WebGL/fragshadersrccopy.frag?raw';
 import FragShaderSrcColorBlend from '../../Shaders/WebGL/fragshadersrccolorblend.frag?raw';
 import FragShaderSrcAlphaBlend from '../../Shaders/WebGL/fragshadersrcalphablend.frag?raw';
 import VertShaderSrcBlend from '../../Shaders/WebGL/vertshadersrcblend.vert?raw';
-import FragShaderSrcBlend from '../../Shaders/WebGL/fragshadersrcblend.frag?raw';
+import FragShaderSrcBlend from '../../Shaders/WebGL/fragshadersrcpremultipliedalphablend.frag?raw';
 
 // Shader
 const VertShaderSrcCopyPath = 'vertshadersrccopy.vert';
