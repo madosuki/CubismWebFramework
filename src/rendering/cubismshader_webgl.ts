@@ -19,6 +19,13 @@ import { CubismRenderTarget_WebGL } from './cubismrendertarget_webgl';
 import { CubismBlendMode, CubismTextureColor } from './cubismrenderer';
 import { CubismRenderer_WebGL } from './cubismrenderer_webgl';
 
+import VertShaderSrcCopy from '../../Shaders/WebGL/vertshadersrccopy.vert?raw';
+import FragShaderSrcCopy from '../..//Shaders/WebGL/fragshadersrccopy.frag?raw';
+import FragShaderSrcColorBlend from '../../Shaders/WebGL/fragshadersrccolorblend.frag?raw';
+import FragShaderSrcAlphaBlend from '../../Shaders/WebGL/fragshadersrcalphablend.frag?raw';
+import VertShaderSrcBlend from '../../Shaders/WebGL/vertshadersrcblend.vert?raw';
+import FragShaderSrcBlend from '../../Shaders/WebGL/fragshadersrcblend.frag?raw';
+
 // Shader
 const VertShaderSrcCopyPath = 'vertshadersrccopy.vert';
 const FragShaderSrcCopyPath = 'fragshadersrccopy.frag';
@@ -62,7 +69,8 @@ export class CubismShader_WebGL {
   /**
    * ブレンドモード用のシェーダーを読み込む
    */
-  private async loadBlendModeShaders(): Promise<void> {
+  private loadBlendModeShaders(): void {
+    /*
     const shaderDir = '../../Framework/Shaders/WebGL/';
 
     // シェーダーファイルのパスとプロパティの対応
@@ -98,6 +106,15 @@ export class CubismShader_WebGL {
     results.forEach(result => {
       (this as any)[result.prop] = result.data;
     });
+    */
+    this._vertShaderSrcCopy = VertShaderSrcCopy;
+    this._fragShaderSrcCopy = FragShaderSrcCopy;
+
+    this._fragShaderSrcColorBlend = FragShaderSrcColorBlend;
+    this._fragShaderSrcAlphaBlend = FragShaderSrcAlphaBlend;
+
+    this._vertShaderSrcBlend = VertShaderSrcBlend;
+    this._fragShaderSrcBlend = FragShaderSrcBlend;
   }
 
   /**
@@ -1510,6 +1527,10 @@ export class CubismShader_WebGL {
       );
 
     // ブレンドモード用のシェーダーのソースの読み込み
+    this.loadBlendModeShaders();
+    this.registerBlendShader();
+    this._isShaderLoaded = true;
+    /*
     this.loadBlendModeShaders()
       .then(() => {
         // NOTE: ファイルの読み込みを待つ必要があるためこのようにする
@@ -1519,6 +1540,7 @@ export class CubismShader_WebGL {
       .catch(error => {
         console.error('Failed to load blend mode shaders:', error);
       });
+    */
   }
 
   /**

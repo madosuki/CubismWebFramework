@@ -11,7 +11,10 @@
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "noImplicitAny": true,
-    "useUnknownInCatchVariables": true
+    "useUnknownInCatchVariables": true,
+    "types": [
+      "vite/client"
+    ],
   },
   "include": [
     "src/**/*.ts",
