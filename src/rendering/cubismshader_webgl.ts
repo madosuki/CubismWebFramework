@@ -143,7 +143,7 @@ export class CubismShader_WebGL {
     results.forEach(result => {
       (this as any)[result.prop] = result.data;
     });
-    */
+
     this._vertShaderSrcCopy = VertShaderSrcCopy;
     this._fragShaderSrcCopy = FragShaderSrcCopy;
 
