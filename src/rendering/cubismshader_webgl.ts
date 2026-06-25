@@ -18,6 +18,13 @@ import { CubismOffscreenRenderTarget_WebGL } from './cubismoffscreenrendertarget
 import { CubismBlendMode, CubismTextureColor } from './cubismrenderer';
 import { CubismRenderer_WebGL } from './cubismrenderer_webgl';
 
+import VertShaderSrc from '../../Shaders/WebGL/vertshadersrc.vert?raw';
+import VertShaderSrcMasked from '../../Shaders/WebGL/vertshadersrcmasked.vert?raw';
+import VertShaderSrcSetupMask from '../../Shaders/WebGL/vertshadersrcsetupmask.vert?raw';
+import FragShaderSrcSetupMask from '../../Shaders/WebGL/fragshadersrcsetupmask.frag?raw';
+import FragShaderSrcPremultipliedAlpha from '../../Shaders/WebGL/fragshadersrcpremultipliedalpha.frag?raw';
+import FragShaderSrcMaskPremultipliedAlpha from '../../Shaders/WebGL/fragshadersrcmaskpremultipliedalpha.frag?raw';
+import FragShaderSrcMaskInvertedPremultipliedAlpha from '../../Shaders/WebGL/fragshadersrcmaskinvertedpremultipliedalpha.frag?raw';
 import VertShaderSrcCopy from '../../Shaders/WebGL/vertshadersrccopy.vert?raw';
 import FragShaderSrcCopy from '../../Shaders/WebGL/fragshadersrccopy.frag?raw';
 import FragShaderSrcColorBlend from '../../Shaders/WebGL/fragshadersrccolorblend.frag?raw';
@@ -143,6 +150,16 @@ export class CubismShader_WebGL {
     results.forEach(result => {
       (this as any)[result.prop] = result.data;
     });
+
+    this._vertShaderSrc = VertShaderSrc;
+    this._vertShaderSrcMasked = VertShaderSrcMasked;
+    this._vertShaderSrcSetupMask = VertShaderSrcSetupMask;
+    this._fragShaderSrcSetupMask = FragShaderSrcSetupMask;
+    this._fragShaderSrcPremultipliedAlpha = FragShaderSrcPremultipliedAlpha;
+    this._fragShaderSrcMaskPremultipliedAlpha =
+      FragShaderSrcMaskPremultipliedAlpha;
+    this._fragShaderSrcMaskInvertedPremultipliedAlpha =
+      FragShaderSrcMaskInvertedPremultipliedAlpha;
 
     this._vertShaderSrcCopy = VertShaderSrcCopy;
     this._fragShaderSrcCopy = FragShaderSrcCopy;
