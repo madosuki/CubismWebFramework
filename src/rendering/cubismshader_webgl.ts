@@ -18,19 +18,19 @@ import { CubismOffscreenRenderTarget_WebGL } from './cubismoffscreenrendertarget
 import { CubismBlendMode, CubismTextureColor } from './cubismrenderer';
 import { CubismRenderer_WebGL } from './cubismrenderer_webgl';
 
-import VertShaderSrc from '../../Shaders/WebGL/vertshadersrc.vert?raw';
-import VertShaderSrcMasked from '../../Shaders/WebGL/vertshadersrcmasked.vert?raw';
-import VertShaderSrcSetupMask from '../../Shaders/WebGL/vertshadersrcsetupmask.vert?raw';
-import FragShaderSrcSetupMask from '../../Shaders/WebGL/fragshadersrcsetupmask.frag?raw';
-import FragShaderSrcPremultipliedAlpha from '../../Shaders/WebGL/fragshadersrcpremultipliedalpha.frag?raw';
-import FragShaderSrcMaskPremultipliedAlpha from '../../Shaders/WebGL/fragshadersrcmaskpremultipliedalpha.frag?raw';
-import FragShaderSrcMaskInvertedPremultipliedAlpha from '../../Shaders/WebGL/fragshadersrcmaskinvertedpremultipliedalpha.frag?raw';
-import VertShaderSrcCopy from '../../Shaders/WebGL/vertshadersrccopy.vert?raw';
-import FragShaderSrcCopy from '../../Shaders/WebGL/fragshadersrccopy.frag?raw';
-import FragShaderSrcColorBlend from '../../Shaders/WebGL/fragshadersrccolorblend.frag?raw';
-import FragShaderSrcAlphaBlend from '../../Shaders/WebGL/fragshadersrcalphablend.frag?raw';
-import VertShaderSrcBlend from '../../Shaders/WebGL/vertshadersrcblend.vert?raw';
-import FragShaderSrcBlend from '../../Shaders/WebGL/fragshadersrcpremultipliedalphablend.frag?raw';
+import VertShaderSrc from '@/Shaders/WebGL/vertshadersrc.vert?raw';
+import VertShaderSrcMasked from '@/Shaders/WebGL/vertshadersrcmasked.vert?raw';
+import VertShaderSrcSetupMask from '@/Shaders/WebGL/vertshadersrcsetupmask.vert?raw';
+import FragShaderSrcSetupMask from '@/Shaders/WebGL/fragshadersrcsetupmask.frag?raw';
+import FragShaderSrcPremultipliedAlpha from '@/Shaders/WebGL/fragshadersrcpremultipliedalpha.frag?raw';
+import FragShaderSrcMaskPremultipliedAlpha from '@/Shaders/WebGL/fragshadersrcmaskpremultipliedalpha.frag?raw';
+import FragShaderSrcMaskInvertedPremultipliedAlpha from '@/Shaders/WebGL/fragshadersrcmaskinvertedpremultipliedalpha.frag?raw';
+import VertShaderSrcCopy from '@/Shaders/WebGL/vertshadersrccopy.vert?raw';
+import FragShaderSrcCopy from '@Shaders/WebGL/fragshadersrccopy.frag?raw';
+import FragShaderSrcColorBlend from '@/Shaders/WebGL/fragshadersrccolorblend.frag?raw';
+import FragShaderSrcAlphaBlend from '@/Shaders/WebGL/fragshadersrcalphablend.frag?raw';
+import VertShaderSrcBlend from '@/Shaders/WebGL/vertshadersrcblend.vert?raw';
+import FragShaderSrcBlend from '@/Shaders/WebGL/fragshadersrcpremultipliedalphablend.frag?raw';
 
 // Shader
 const VertShaderSrcPath = 'vertshadersrc.vert';

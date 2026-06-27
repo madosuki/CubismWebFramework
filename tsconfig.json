@@ -1,10 +1,11 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
+    "rootDir": "./",
     "outDir": "./dist",
     "declaration": true,
     "declarationMap": true,
@@ -23,5 +24,8 @@
   "exclude": [
     "node_modules",
     "dist"
-  ]
+  ],
+  "paths": {
+      "@/*": ["./src/*"],
+  }
 }
